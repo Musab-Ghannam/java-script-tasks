@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<body>
+
+    
+    <select   class="sel"  onchange="changeCountry()" id="mysel">
+
+<option id="jor" value="JO" >JORDAN</option>
+<option id="ksa" value="KSA" >KSA</option>
+<option id="pal" value="PL">Palastine</option>
+<option id="ira" value="IQ">Iraq</option>
+
+
+
+    </select>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <img width="200px" src="/OIP (1).jpg" id="flag"> 
+
+    <script>
+
+
+
+  function changeCountry (){
+
+let z=document.getElementById("mysel").value;
+
+
+switch(z){
+
+
+    case"KSA": document.getElementById("flag").src="/ksa.png";
+    break;
+
+    case"PL": document.getElementById("flag").src="/OIP...pppa.jpg";
+    break;
+    case"JO": document.getElementById("flag").src="/OIP (1).jpg";
+    break;
+    case"IQ": document.getElementById("flag").src="/iraq.jpg";
+    break;
+}
+
+
+}
+
+
+    </script>
+
+
+</body>
+</html>

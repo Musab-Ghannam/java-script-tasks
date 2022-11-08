@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+<body>
+    <div class="ok" style="display: flex;">
+<select id="fontfam" onchange="fontFamily()">
+<option value="ar">Arial</option>
+<option value="tim">Times New roman</option>
+<option value="fr">Courier New</option>
+<option value="ver">VERDANA</option>
+
+
+</select>
+
+<select id="fontsize" onchange="fontSize()" >
+    <option value="tw">12pt</option>
+    <option value="ss">16pt</option>
+    <option value="tn">20pt</option>
+    <option value="tf">24pt</option>
+    <option value="th">30pt</option>
+    
+    </select>
+
+<div id="fontweight" class="smp">
+    <form style="margin-left:50px ;" >
+
+       
+<label for="it" value="it" >Italic</label>
+        <input type="radio" name="ok" value="it" id="it" onchange="fontWeight()">
+<label for="bol" >Bold</label>
+        <input type="radio" name="ok" value="bol" id="bol" onchange="fontstyle()">
+<label for="und" >Underline</label>
+        <input type="radio"  name="ok" value="und" id="und" onchange="txtdeco()">
+    
+    </form>
+
+</div>
+</div>
+<textarea rows="10" cols="100" style="margin-top: 50px;" id="TXT">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Molestiae error repellendus incidunt id odio repudiandae earum voluptate sapiente voluptatem illo, architecto, perferendis
+     provident sunt expedita
+     magnam nisi labore hic tenetur? </textarea>
+
+
+
+
+   
+
+<script>
+
+
+function fontFamily(){
+
+let x =document.getElementById("fontfam").value;
+
+switch(x){
+
+case"ar":document.getElementById("TXT").style.fontFamily="Arial Black";
+break;
+
+case"tim":document.getElementById("TXT").style.fontFamily="Times New Roman";
+break;
+
+case"fr":document.getElementById("TXT").style.fontFamily="Courier New";
+break;
+
+case"ver":document.getElementById("TXT").style.fontFamily="Verdana";
+break;
+
+}
+
+
+}
+
+
+
+function fontSize(){
+
+let x =document.getElementById("fontsize").value;
+
+switch(x){
+
+case"tw":document.getElementById("TXT").style.fontSize="12px";
+break;
+
+case"ss":document.getElementById("TXT").style.fontSize="16px";
+break;
+
+case"tn":document.getElementById("TXT").style.fontSize="20px";
+break;
+
+case"tf":document.getElementById("TXT").style.fontSize="24px";
+break;
+case"th":document.getElementById("TXT").style.fontSize="30px";
+break;
+
+}
+
+
+}
+
+
+
+function fontWeight(){
+
+let x =document.getElementById("it").value;
+
+
+if(x=="it"){
+    document.getElementById("TXT").style.fontStyle = "italic";
+    
+}}
+
+
+function fontstyle(){
+
+let x =document.getElementById("bol").value;
+
+
+
+if(x=="bol"){
+    document.getElementById("TXT").style.fontWeight = "bold";
+
+}}
+
+
+function txtdeco(){
+
+let x =document.getElementById("und").value;
+
+
+if(x=="und"){
+    document.getElementById("TXT").style.textDecoration = "underline";
+
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// }if(x=="bol"){
+//     document.getElementById("TXT").style.fontWeight = "bold";
+
+
+// }
+
+
+// switch(x){
+
+// case"it":document.getElementById("TXT").style.fontStyle = "italic";
+// break;
+
+// }
+// switch(z){
+// case"bol":document.getElementById("TXT").style.fontWeight = "bold";
+// break;
+// }
+
+
+
+// switch(r){
+// case"und":document.getElementById("TXT").style.textDecoration = "underline";
+// break;}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

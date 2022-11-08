@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<body>
+    
+<form action="#">
+
+<label>Password(min. 6 charachters):</label><input type="password" style="margin-left: 5px;" id="pass" name="pass">
+<p id="too"></p>
+<br>
+<br>
+<br>
+<br>
+<label> Reapeat Password</label><input type="password" style="margin-left: 70px;" id="repeat" name="pass">
+<p id="match"></p>
+<br>
+<br>
+<br>
+<input id="sub" type="submit" value="submit" style="display:none ;">
+
+
+</form>
+
+<script>
+
+var z=document.getElementById("pass");
+
+var q=document.getElementById("repeat");
+
+
+
+if((z.value.length>=6)&&(q.value==z.value)){
+  
+  
+document.getElementById("sub").style.display="block"}
+
+
+z.onkeydown= function(){
+
+   
+    if((z.value.length<6)){
+
+  
+        let t=document.getElementById("too")
+        
+        
+        t.style.color="red";
+        t.innerHTML="too short";
+        t.style.display="inline";
+     
+}
+z.onblur = function(){
+    let t=document.getElementById("too")
+    
+    t.style.display="none";
+}
+
+
+
+}
+
+q.onkeyup = function(){
+
+   
+if((q.value!=z.value)){
+
+   
+    let f=document.getElementById("match")
+    
+    
+    f.style.color="red";
+    f.innerHTML="two password don not match";
+    f.style.display="inline";
+ 
+}
+
+}
+
+
+q.onblur = function(){
+    let f=document.getElementById("match")
+    
+   f.style.display="none";
+}
+
+
+// document.getElementById("sub").style.display="block"
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
