@@ -41,6 +41,14 @@ function myInfo(){
     
      if ( theHtml.checked == true){
         sessionStorage.setItem("Technology used is", theHtml.value);}
+
+else if( theHtml.checked == false){
+
+
+   sessionStorage.removeItem("Technology used is")
+}
+
+
      if( theCss.checked== true){
         sessionStorage.setItem("Technology usedis", thegendmale.value);}
      if( theJava.checked== true){
@@ -104,23 +112,28 @@ function myInfo(){
      
     <h1>Masterpiece</h1>
     
-    ${sessionStorage.key(3)}   ${theName.value} <br><br><br>
+    ${sessionStorage.key(7)}   ${theName.value} <br><br><br>
     
     
-    ${sessionStorage.key(2)}  ${thedescrip.value} <br><br><br>
+    ${sessionStorage.key(8)}  ${thedescrip.value} <br><br><br>
     
     
     
     ${sessionStorage.key(4)}   ${ theHtml.value} <br><br><br>
      
      
-    ${sessionStorage.key(1)}   ${ theCss.value} <br><br><br>
+    ${sessionStorage.key(9)}                  ${ theCli.value} <br><br><br>
      
-    ${sessionStorage.key(3)}  ${theJava.value} <br><br><br>
-    ${sessionStorage.key(5)}  ${ thenet.value} <br><br><br>
-    ${sessionStorage.key(6)}  ${  theCli.value} <br><br><br>
-    ${sessionStorage.key(7)}  ${thevisit.value} <br><br><br>
-    ${sessionStorage.key(8)}  ${thepubl.value} <br><br><br>
+    
+   ${sessionStorage.key(6)}              ${  thevisit.value} <br><br><br>
+   ${sessionStorage.key(5)}                ${    thepubl.value} <br><br><br>
+   
+   ${sessionStorage.key(9)}         ${ theHtml.value} <br><br><br>
+     
+    
+   ${sessionStorage.key(2)}          ${  thevisit.value} <br><br><br>
+   ${sessionStorage.key(5)}                ${    thepubl.value} <br><br><br>
+   
      
      
     
@@ -135,9 +148,5 @@ function myInfo(){
     
      
     }
-    function card(){
-    
-        
-    }
-    
+   
     
