@@ -34,13 +34,7 @@ var q=document.getElementById("repeat");
 
 
 
-if((z.value.length>=6)&&(q.value==z.value)){
-  
-  
-document.getElementById("sub").style.display="block"}
-
-
-z.onkeydown= function(){
+z.onkeyup= function(){
 
    
     if((z.value.length<6)){
@@ -54,20 +48,23 @@ z.onkeydown= function(){
         t.style.display="inline";
      
 }
-z.onblur = function(){
-    let t=document.getElementById("too")
-    
-    t.style.display="none";
+else if(z.value.length>=6){
+
+        let t=document.getElementById("too")
+t.style.display="none";
+
+}
+
 }
 
 
 
-}
 
-q.onkeyup = function(){
+
+q.onkeyup= function(){
 
    
-if((q.value!=z.value)){
+ if(q.value!=z.value){
 
    
     let f=document.getElementById("match")
@@ -77,16 +74,69 @@ if((q.value!=z.value)){
     f.innerHTML="two password don not match";
     f.style.display="inline";
  
-}
+ }
+ else if(q.value==z.value){
 
-}
-
-
-q.onblur = function(){
     let f=document.getElementById("match")
-    
-   f.style.display="none";
+f.style.display="none";
+
+} if(q.value==z.value&&z.value.length>=6){
+
+    document.getElementById("sub").style.display="block";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+//  q.onkeydown= function(){if(q.value==z.value){
+
+ 
+//     let f=document.getElementById("match")
+    
+    
+   
+//     f.style.display="none";}
+//     // document.getElementById("sub").style.display="block"
+
+
+// } 
+
+
+// q.onkeydown= function(){if(q.value==z.value&&z.value>=6){
+
+ 
+
+// document.getElementById("sub").style.display="block"
+
+
+// }}
+
+
+
+
+
+
+
+
+
+
+
 
 
 // document.getElementById("sub").style.display="block"
