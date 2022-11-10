@@ -42,33 +42,66 @@ function myInfo(){
      if ( theHtml.checked == true){
         sessionStorage.setItem("Technology used is", theHtml.value);}
 
-else if( theHtml.checked == false){
-
-
-   sessionStorage.removeItem("Technology used is")
-}
+        else{
+         sessionStorage.removeItem("Technology used is");
+     
+     
+     
+      }
 
 
      if( theCss.checked== true){
-        sessionStorage.setItem("Technology usedis", thegendmale.value);}
+        sessionStorage.setItem("Technology usedis", theCss.value);}
+
+        else{
+         sessionStorage.removeItem("Technology usedis");
+     
+     
+     
+      }
+
+
+
      if( theJava.checked== true){
         sessionStorage.setItem("Technology used is:", theJava.value);}
+
+        else{
+         sessionStorage.removeItem("Technology used is:")}
+     
+     
+     
+
+
+
      if( thenet.checked== true){
         sessionStorage.setItem("Technology used is.", thenet.value);}
     
-    
+        else{
+         sessionStorage.removeItem("Technology used is.")}
     
     
      if (theCli.checked == true){
         sessionStorage.setItem("User Type is", theCli.value);
-     }
+     } else{
+      sessionStorage.removeItem("User Type is")}
+
+
+
+
+
+
      if (thevisit.checked == true){
         sessionStorage.setItem("User Type is:", thevisit.value);
      }
+     else{
+      sessionStorage.removeItem("User Type is:")}
+
+
+
      if (thepubl.checked == true){
         sessionStorage.setItem("User Type is.", thepubl.value);
-     }
-
+     }else{
+      sessionStorage.removeItem("User Type is.")}
 
 
 
@@ -112,27 +145,41 @@ else if( theHtml.checked == false){
      
     <h1>Masterpiece</h1>
     
-    ${sessionStorage.key(7)}   ${theName.value} <br><br><br>
+    the subject is:     ${theName.value} <br><br><br>
     
     
-    ${sessionStorage.key(8)}  ${thedescrip.value} <br><br><br>
+    "about my project:"    ${thedescrip.value} <br><br><br>
     
     
+
+
+
+
+
+    User Type is           ${  theCli.value} <br><br><br>
+      
     
-    ${sessionStorage.key(4)}   ${ theHtml.value} <br><br><br>
+    User Type is:        ${  thevisit.value} <br><br><br>
+
+
+    User Type is.            ${    thepubl.value} <br><br><br>
+
+
+
+
+
+
+    
+    Technology used is  ${ theHtml.value} <br><br><br>
      
      
-    ${sessionStorage.key(9)}                  ${ theCli.value} <br><br><br>
+    Technology usedis                ${   theCss.value} <br><br><br>
      
     
-   ${sessionStorage.key(6)}              ${  thevisit.value} <br><br><br>
-   ${sessionStorage.key(5)}                ${    thepubl.value} <br><br><br>
+    Technology used is:             ${  theJava.value} <br><br><br>
+    "Technology used is.                ${     thenet.value} <br><br><br>
    
-   ${sessionStorage.key(9)}         ${ theHtml.value} <br><br><br>
-     
-    
-   ${sessionStorage.key(2)}          ${  thevisit.value} <br><br><br>
-   ${sessionStorage.key(5)}                ${    thepubl.value} <br><br><br>
+   
    
      
      

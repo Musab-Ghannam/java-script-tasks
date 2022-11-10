@@ -43,9 +43,9 @@ theName=document.getElementById("myName");
  if ( thegendmale.checked == true){
     localStorage.setItem("my gender is:", thegendmale.value);}
  else{
-   localStorage.setItem("my gender is:", thegendmale.value);}
+   localStorage.removeItem("my gender is:");
 
-
+ }
 
 //  }
  
@@ -112,29 +112,31 @@ cad.innerHTML=
  
 <h1>ABOUT ME</h1>
 
-${localStorage.key(3)}   ${theName.value} <br><br><br>
+My name is:  ${theName.value} <br><br><br>
 
 
-${localStorage.key(2)}  ${theMajor.value} <br><br><br>
+My major is :   ${theMajor.value} <br><br><br>
 
 
 
-${localStorage.key(4)}   ${thegendmale.value} <br><br><br>
+My gender is :  ${thegendmale.value} <br><br><br>
  
  
-${localStorage.key(1)}   ${theAge.value} <br><br><br>
+My age is:   ${theAge.value} <br><br><br>
  
-${localStorage.key(3)}  ${thedescrip.value} <br><br><br>
-${localStorage.key(5)}  ${ theHtml.value} <br><br><br>
-${localStorage.key(6)}  ${ theCss.value} <br><br><br>
-${localStorage.key(7)}  ${theJava.value} <br><br><br>
+About me:  ${thedescrip.value} <br><br><br>
+MY SKILLS IS1: ${ theHtml.value} <br><br><br>
+MY SKILLS IS2:   ${ theCss.value} <br><br><br>
+MY SKILLS IS3:   ${theJava.value} <br><br><br>
  
  
 
 
  </div`
 
- 
+ for (let i = 0; i < localStorage.length; i++) {
+   console.log(localStorage.getItem(localStorage.key(i)));
+ }
 
 
  
