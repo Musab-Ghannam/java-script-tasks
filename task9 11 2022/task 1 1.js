@@ -1,6 +1,6 @@
 function myInfo(){
 
-console.log(123)
+
 theName=document.getElementById("myName");
  theAge=document.getElementById("myAge");
  thegendmale=document.getElementById("mal");
@@ -22,42 +22,24 @@ theName=document.getElementById("myName");
  localStorage.setItem("about me:",  thedescrip.value);
  localStorage.setItem("my major is:",  theMajor.value);
 
- localStorage.removeItem("the language I learnt:");
- localStorage.removeItem("the language I learnt:1");
- localStorage.removeItem("the language I learnt:2");
- localStorage.removeItem("language");
- localStorage.removeItem("My gender :");
-
-
-//  let gend = document.forms[0];
-
-//  for (i = 0; i < gend.length; i++) {
-//    if (gend[i].checked) {
-//      txt =gend[i].value + " ";
-//    }
-//  }
-//  localStorage.setItem("My gender :", txt);
 
 
 
- if ( thegendmale.checked == true){
-    localStorage.setItem("my gender is:", thegendmale.value);}
- else{
-   localStorage.removeItem("my gender is:");
-
- }
-
-//  }
- 
-// if(thegendfem.checked==true){
-   
-//     localStorage.setItem("my genderis:", thegendfem.value);
 
 
-//  }else{
-//     localStorage.removeItem("my genderis:");
+var elements = document.getElementsByName("gend");
 
-//  }
+
+for(i=0;i<elements.length;i++){
+
+ if ( elements[i].checked==true){
+
+    localStorage.setItem("my gender is:", elements[i].value);}
+
+
+
+}
+
 
  if (theHtml.checked == true){
     localStorage.setItem("MY SKILLS IS1:", theHtml.value);
@@ -133,16 +115,13 @@ MY SKILLS IS3:   ${theJava.value} <br><br><br>
 
 
  </div`
+ 
 
- for (let i = 0; i < localStorage.length; i++) {
-   console.log(localStorage.getItem(localStorage.key(i)));
- }
 
+console.log(5)
 
  
 }
-function card(){
-
-    
-}
+z=5
+document.write(z)
 
